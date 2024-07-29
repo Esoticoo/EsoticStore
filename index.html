@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esotic Store | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="Img/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Abolition&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <div class="menu-container">
+            <span class="menu-icon">☰</span>
+            <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+        </div>
+        <div class="logo">
+            <img src="img/logo.PNG" alt="Esotic Store Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home"><i class="fa-solid fa-house"></i>Home</a></li>
+                <li><a href="#informazioni"><i class="fa-solid fa-circle-question"></i>Informazioni</a></li>
+                <li><a href="mailto:EsoticSupport@gmail.com"><i class="fa-solid fa-envelope"></i>Contattami</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+        </div>
+    </header>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="side-menu" id="sideMenu">
+        <span class="close-btn" id="closeBtn">&times;</span>
+        <ul>
+            <li><h1>Menu</h1></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Informazioni</a></li>
+            <li><a href="mailto:EsoticSupport@gmail.com">Contattami</a></li>
+        </ul>
+        <div class="contact-info">
+            <p>Email: Esoticsupport@gmail.com</p>
+            <div class="social-icons">
+                <a  href="https://discord.gg/BzdNUbNudK"><i class="fa-brands fa-discord"></i> Entra nel nostro discord!</a> 
+                <a href="https://instagram.com"><i class="fa-brands fa-instagram"> Seguici su instagram!</i></a> 
+                <a href="https://tiktok.com"><i class="fa-brands fa-tiktok"></i> Seguici su tik tok!</a> 
+                
+            </div>
+        </div>
+    </div>
+ 
+    <div class="search-bar" id="searchBar">
+        <input autocomplete="off" type="text" placeholder="Cerca..." id="search-bar">
+        <button id="search-button" class="search-submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <div id="suggestions" class="suggestions"></div>
+        <span class="close-search" id="closeSearch">&times;</span>
+    </div>
+    
+
+
+    <main id="home">
+        <h1>Sconti in evidenza</h1>
+        <div class="product-grid">
+            <!-- ★☆ blocco per ogni prodotto -->
+              <a href="https://amzn.to/3yNZOhj" id="product-1" >
+            <div class="product-card">
+                <img src="prodotti/tv.png" alt="">
+                <span class="save-label"><i class="fas fa-tag"></i> SAVE €107.00</span>
+                <h2>Samsung Smart TV 43"</h2>
+                <div class="rating">★★★★☆ (4,3)</div>
+                <div class="price">
+                    <span class="current-price">€343.00</span>
+                    <span class="original-price">€450.00</span>
+                </div>
+            </div>
+        </a>
+            <!-- Fine del blocco prodotto -->
+            <a href="https://amzn.to/4bHNdei" id="product-2" >
+                <div class="product-card"> 
+                    <img src="prodotti/cuffie.png" alt="">
+                    <span class="save-label"><i class="fas fa-tag"></i> SAVE 20%</span>
+                    <h2>Huawei FreeBuds SE 2</h2>
+                    <div class="rating">★★★★☆ (4,4)</div>
+                    <div class="price">
+                        <span class="current-price">€39.00</span>
+                        <span class="original-price">€49.00</span>
+                    </div>
+                </div>
+            </a>
+                <!-- Fine del blocco prodotto -->
+                <a href="https://amzn.to/4bSgpiT" id="product-3">
+                    <div class="product-card">
+                        <img src="prodotti/Dash.png" alt="">
+                        <span class="save-label"><i class="fas fa-tag"></i> SAVE 6%</span>
+                        <h2>Dash Pods Detersivo 116 Lavaggi </h2>
+                        <div class="rating">★★★★★ (4,7)</div>
+                        <div class="price">
+                            <span class="current-price">€54.83</span>
+                            <span class="original-price">€58.49</span>
+                        </div>
+                    </div>
+                </a>
+                    <!-- Fine del blocco prodotto -->
+                    <a href="https://amzn.to/4bMDm6W" id="product-4">
+                        <div class="product-card">
+                            <img src="prodotti/zanzariera.png" alt="">
+                            <span class="save-label"> <i class="fas fa-tag"></i> SAVE €13.00</span>
+                            <h2>Zanzariera Magnetica Finestra</h2>
+                            <div class="rating">★★★☆☆ (3,2)</div>
+                            <div class="price">
+                                <span class="current-price">€22.99</span>
+                                <span class="original-price">€35.99</span>
+                            </div>
+                        </div>
+                    </a>
+                        <!-- Fine del blocco prodotto -->
+           
+            
+        </div>
+    </main>
+    <section class="faq-section" id="informazioni">
+        <h2><i class="fa-regular fa-circle-question"></i> FAQ</h2>
+       
+        <div class="faq-item">
+            <div class="faq-question">Sicurezza</div>
+            <div class="faq-answer">
+                <p> Ogni link dei prodotti che ti sugerisco sono generati direttamente da amazon, tramite al processo di affiliazione infatti non dovrai inserire informazioni di pagamento ne tanto meno personali nel mio sito. Il mio compito
+                     è di sugerirti tramite un'accurata ricerca ogni giorno dei prodotti con sconti storici! In sostanza, tu ottieni i migliori prodotti a prezzi scontati e io ricevo una piccola commissione per il mio lavoro di ricerca e raccomandazione. Grazie per aver scelto di visitare il mio sito e spero che troverai utili i miei consigli sui prodotti. Se hai domande o richieste, non esitare a contattarmi. Buono shopping!
+                </p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Cos'è un processo di affiliazione?</div>
+            <div class="faq-answer">
+                <p>Se ti stai chiedendo come funziona il processo di affiliazione di cui parlo, permettimi di spiegarti. In sostanza, il processo di affiliazione è un modo intelligente per guadagnare denaro online mentre ti fornisco consigli su prodotti scontati da Amazon. Ecco come funziona: Scelgo e recensisco i migliori prodotti disponibili su Amazon, tenendo conto della qualità, dell'utilità e dell'affidabilità. Ogni volta che clicchi su uno dei link dei prodotti che consiglio qui sul mio sito e procedi all'acquisto su Amazon, ricevo una piccola commissione. Questo non comporta alcun costo aggiuntivo per te, ma è una semplice ricompensa per il mio lavoro nel trovarti le migliori offerte. Il processo è completamente trasparente: quando accedi a Amazon tramite i miei link, verrai reindirizzato direttamente al prodotto che hai selezionato, senza alcuna differenza nell'esperienza di acquisto.</p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">Contatti</div>
+            <div class="faq-answer">
+                <p>Se avete alcuni dubbi/richieste inerenti al mio sito potete benissimo contattarmi all'indirizzo e-mail: ✉ Shop.esotic@gmail.com ricordo che non corrispondo ne ad acquisti ne a resi di prodotti, per eventuali problemi contattate direttamente il servizio cliente di Amazon!</p>
+            </div>
+        </div>
+       
+    </section>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>Esotic store è un sito Busines showcase tramite dove puoi visionare prodotti scontati. Cliccando sul prodotto desiderato verrai mandato direttamente sul sito amazon dove potrai acquistare il tuo prodotto in sicurezza!</p>
+                <a href="mailto:">Email: esoticsupport@gmail.com</p>
+                    <p><span href="https://instagram.com"><i class="fa-brands fa-discord"></i></span><span href="https://instagram.com"><i class="fa-brands fa-instagram"></i></span><span href="https://instagram.com"><i class="fa-brands fa-tiktok"></i></span></p>
+               
+            </div>
+           
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 EsoticStore</p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
