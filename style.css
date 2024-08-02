@@ -161,7 +161,11 @@ main {
 .contact-info {
     padding: 16px;
 }
-
+.social-icons{
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    margin-left: 50px ;
+}
 .social-icons a {
     display: block;
     margin-top: 10px;
