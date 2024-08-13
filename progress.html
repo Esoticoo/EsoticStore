@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina in Lavorazione</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column; /* Imposta la direzione del layout in colonna */
+            align-items: center; /* Centra gli elementi orizzontalmente */
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px; /* Aggiunge spazio tra il testo e l'immagine */
+        }
+        .header {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .subtitle-container {
+            position: relative;
+            display: inline-block;
+            margin-top: 20px; /* Aggiunto spazio tra il testo e la lineetta */
+        }
+
+        .subtitle {
+            font-size: 24px;
+            color: #666;
+            display: inline-block;
+        }
+
+        .cursor {
+            position: absolute;
+            bottom: -8px; /* Altezza aggiornata */
+            left: 0;
+            width: 2px;
+            height: 32px; /* Altezza aggiornata */
+            background-color: #666;
+            animation: moveCursor 1s linear forwards;
+            animation-play-state: paused;
+        }
+
+        @keyframes moveCursor {
+            0% {
+                left: 0;
+            }
+            100% {
+                left: calc(100% - 2px);
+            }
+        }
+
+        /* Stile per il pulsante "Ritorna alla Home" */
+        .home-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #ccc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .home-button:hover {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="home-button">Ritorna alla Home</a> <!-- Pulsante in alto a sinistra -->
+    
+    <div class="container">
+        <div class="subtitle-container">
+            <div class="subtitle" id="animatedSubtitle"></div>
+            <div class="cursor"></div>
+        </div>
+
+        <img src="./work.PNG" alt="Work in progress">
+    </div>
+    <script>
+        const subtitleElement = document.getElementById('animatedSubtitle');
+        const cursorElement = document.querySelector('.cursor');
+        const text = "Lavori in corso...";
+        let index = 0;
+
+        function addText() {
+            subtitleElement.textContent += text[index];
+            index++;
+            cursorElement.style.animationPlayState = 'running'; // Avvia l'animazione della lineetta
+            if (index < text.length) {
+                setTimeout(addText, 100); // Regola la velocità di scrittura
+            } else {
+                cursorElement.style.animationPlayState = 'paused'; // Ferma l'animazione quando il testo è completamente scritto
+                setTimeout(eraseText, 6000); // Cancella il testo dopo 10 secondi
+            }
+        }
+
+        function eraseText() {
+            let textLength = subtitleElement.textContent.length;
+            if (textLength > 0) {
+                subtitleElement.textContent = subtitleElement.textContent.slice(0, -1); // Rimuove l'ultimo carattere
+                setTimeout(eraseText, 100); // Richiama la funzione ricorsivamente finché il testo non è completamente cancellato
+            } else {
+                index = 0; // Resetta l'indice per riscrivere il testo
+                addText(); // Inizia a riscrivere il testo
+            }
+        }
+
+        addText();
+    </script>
+</body>
+</html>
